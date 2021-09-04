@@ -1,0 +1,8 @@
+<ng-template [ngIf]="!showUserPosts">
+    <user-list [users]="users" (open)="openUserPosts($event)"></user-list>
+</ng-template>
+
+<ng-template [ngIf]="showUserPosts">
+    <user-detail [user]="selectedUser" (close)="closeUserPosts()"></user-detail>
+</ng-template>
+ 

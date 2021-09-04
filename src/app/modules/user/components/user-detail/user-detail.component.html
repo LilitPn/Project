@@ -1,0 +1,21 @@
+<div id="user-detail">
+    <div class="user">
+        <div class="avatar">
+            <img src="../../../../../assets/images/user.jpg">
+            <h2>{{user.name}}</h2>
+        </div>
+        <div>
+            <button type="button" class="back-btn" (click)="goBackToUsersList()">Go Back</button>
+        </div>
+    </div>
+    <table class="table">
+        <tr>
+            <th>Id</th>
+            <th>Post</th>
+        </tr>
+        <tr *ngFor="let post of user.posts;">
+            <td>{{post.id}}</td>
+            <td>{{post.title | titlecase }}</td>
+        </tr>
+    </table>
+</div>

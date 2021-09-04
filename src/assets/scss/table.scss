@@ -1,0 +1,50 @@
+.table {
+    border-collapse: collapse;
+    width: 97%;
+    margin: 5px auto;
+    
+    td, th {
+    padding: 8px;
+    }
+    
+    tr{
+      text-align: center;
+      
+      &:hover {background-color: rgb(236, 245, 247)}
+    }
+  
+    th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #6d8eb6ad;
+    color: white;
+    text-align: center;
+    }
+}
+
+
+@media(max-width:700px){
+  .table{
+    th{
+      display: none;
+    }
+
+    tr{
+      display: flex;
+    flex-direction: column;
+    padding: 18px;
+    background-color: rgb(236, 245, 247);
+    margin-bottom: 10px;
+    border-radius: 5px;
+    }
+
+  tr:first-child{
+      display: none;
+    }
+
+    td{
+      font-size: 20px;
+    }
+  }
+}
